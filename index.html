@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/css/index.css" />
+        <title>Playbook Creator</title>
+    </head>
+    <body>
+        <div class="header-container">
+            <input
+                id="play-name"
+                type="input"
+                name="play-name"
+                placeholder="Play name..."
+            />
+        </div>
+        <div id="canvas-container"></div>
+        <div id="canvas-menu">
+            <div class="canvas-menu-container">
+                <button class="route-endcap canvas-menu-btn" data-type="route">
+                    <svg
+                        class="canvas-svg endcap btn-selected"
+                        viewBox="0 0 40 40"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <line
+                            x1="10"
+                            y1="25"
+                            x2="20"
+                            y2="7"
+                            stroke-width="3"
+                            stroke-linecap="round"
+                        />
+
+                        <line
+                            x1="20"
+                            y1="7"
+                            x2="30"
+                            y2="25"
+                            stroke-width="3"
+                            stroke-linecap="round"
+                        />
+                        <line
+                            x1="20"
+                            y1="10"
+                            x2="20"
+                            y2="30"
+                            stroke-width="3"
+                            stroke-linecap="round"
+                        />
+                    </svg>
+                </button>
+                <button class="block-endcap canvas-menu-btn" data-type="block">
+                    <svg
+                        class="canvas-svg endcap"
+                        viewBox="0 0 40 40"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <line
+                            x1="10"
+                            y1="10"
+                            x2="30"
+                            y2="10"
+                            stroke-width="3"
+                            stroke-linecap="round"
+                        />
+
+                        <line
+                            x1="20"
+                            y1="10"
+                            x2="20"
+                            y2="30"
+                            stroke-width="3"
+                            stroke-linecap="round"
+                        />
+                    </svg>
+                </button>
+            </div>
+            <div class="canvas-menu-container">
+                <div class="canvas-colorpicker">
+                    <label for="line-color">Line:</label>
+                    <input
+                        type="color"
+                        id="line-color-picker"
+                        name="line-color"
+                        value="#383838"
+                    />
+                </div>
+                <div>
+                    <label for="player-color">Player:</label>
+                    <input
+                        type="color"
+                        id="player-color-picker"
+                        name="player-color"
+                        value="#ffffff"
+                    />
+                </div>
+            </div>
+            <div class="canvas-menu-container">
+                <button
+                    class="canvas-player-circle canvas-menu-btn"
+                    data-type="circle"
+                >
+                    <svg
+                        class="canvas-svg btn-selected player-shape"
+                        viewBox="0 0 40 40"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <circle
+                            cx="20"
+                            cy="20"
+                            r="11"
+                            fill="none"
+                            stroke-width="3"
+                        />
+                    </svg>
+                </button>
+                <button
+                    class="canvas-player-triangle canvas-menu-btn"
+                    data-type="triangle"
+                >
+                    <svg
+                        class="canvas-svg player-shape"
+                        viewBox="0 0 40 40"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <line
+                            x1="7"
+                            y1="30"
+                            x2="20"
+                            y2="7"
+                            stroke-width="3"
+                            stroke-linecap="round"
+                        />
+
+                        <line
+                            x1="20"
+                            y1="7"
+                            x2="30"
+                            y2="30"
+                            stroke-width="3"
+                            stroke-linecap="round"
+                        />
+                        <line
+                            x1="7"
+                            y1="30"
+                            x2="30"
+                            y2="30"
+                            stroke-width="3"
+                            stroke-linecap="round"
+                        />
+                    </svg>
+                </button>
+                <button
+                    class="canvas-player-square canvas-menu-btn"
+                    data-type="square"
+                >
+                    <svg
+                        class="canvas-svg player-shape"
+                        viewBox="0 0 40 40"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <rect
+                            x="7.5"
+                            y="7.5"
+                            width="25"
+                            height="25"
+                            fill="none"
+                            stroke-width="3"
+                        />
+                    </svg>
+                </button>
+            </div>
+            <div class="canvas-menu-container">
+                <button class="canvas-menu-btn print-btn">Download</button>
+            </div>
+        </div>
+
+        <script src="/js/lib/svg.min.js"></script>
+        <script src="/js/lib/html2canvas.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+        <script type="module" src="/js/index.js"></script>
+    </body>
+</html>
